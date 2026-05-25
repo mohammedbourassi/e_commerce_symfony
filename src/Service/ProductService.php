@@ -11,6 +11,11 @@ class ProductService implements ProductServiceInterface
     {
     }
 
+    public function getAllProducts(): array
+    {
+        return $this->productRepository->findAll();
+    }
+
     public function getProductById(int $id): Product
     {
         return $this->productRepository->getProductById($id);

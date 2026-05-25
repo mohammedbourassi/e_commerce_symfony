@@ -52,4 +52,5 @@ class LoginType extends AbstractType
     {
         // nothing required for simple login form
     }
+
 }

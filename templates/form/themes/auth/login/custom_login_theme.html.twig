@@ -1,9 +1,10 @@
 {% block login_row %}
 
                                 {{ form_start(form) }}
+                                    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
                                     <div class="mb-3">
                                         {{ form_label(form.email, 'Email address' , {label_attr: {class: 'form-label'}}) }}
-                                        {{ form_widget(form.email, {attr: {class: 'form-control'}}) }}
+                                        {{ form_widget(form.email, {attr: {class: 'form-control', value: last_username|default('')}}) }}
                                         {{ form_errors(form.email) }}
                                     </div>
                                     <div class="mb-3">
