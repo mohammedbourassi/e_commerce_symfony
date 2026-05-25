@@ -19,5 +19,11 @@ services:
     App\:
         resource: '../src/'
 
+    App\Service\CategoryServiceInterface: '@App\Service\CategoryService' 
+    App\Service\ProductServiceInterface: '@App\Service\ProductService'
+    App\Service\CartHandlerInterface: '@App\Service\CartHandler'
+
+    App\Cart\Contract\CartInterface: '@App\Cart\Service\SessionCart'
+
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
